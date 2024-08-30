@@ -1,34 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Blog preview card</title>
 
-  Learning
+    <style>
+      @font-face {
+        font-family: "Figtree-Italic";
+        src: url("assets/fonts/Figtree-Italic-VariableFont_wght.ttf");
+      }
+      @font-face {
+        font-family: "Figtree";
+        src: url("assets/fonts/Figtree-VariableFont_wght.ttf");
+      }
 
-  Published 21 Dec 2023
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        display: block;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        background-color: hsl(47, 88%, 63%);
+        font-family: Figtree;
+      }
+      main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 95vh;
 
-  HTML & CSS foundations
+        flex-direction: column;
+      }
+      .card {
+        display: inline-block;
+        background-color: white;
+        padding: 1.2vw;
+        border: 1px solid black;
+        border-radius: 1vw;
+        width: min-content;
 
-  These languages are the backbone of every website, defining structure, content, and presentation.
+        box-shadow: 8px 10px;
+      }
+      .card object {
+        border-radius: 0.5vw;
+        margin-bottom: 1vh;
+      }
+      .card .tag {
+        display: inline-block;
+        padding: 0.4vw 0.5vw;
+        border-radius: 0.25vw;
+        background-color: hsl(47, 88%, 63%);
+        font-weight: 900;
+        font-size: smaller;
+      }
+      .card h2 {
+        font-weight: 900;
+        cursor: pointer;
+      }
+      .card h2:hover {
+        color: hsl(47, 88%, 63%);
+      }
 
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .card .date {
+        font-weight: 600;
+        font-size: smaller;
+      }
+      .card .definition {
+        color: hsl(0, 0%, 42%);
+        font-weight: 500;
+        line-height: 2.3vh;
+      }
+
+      .card .author {
+        display: flex;
+        justify-content: left;
+        flex-direction: row;
+        align-items: center;
+        font-weight: 800;
+      }
+      .card .author img {
+        max-width: 32px;
+        padding-right: 0.5vw;
+      }
+      @media only screen and (max-width: 500px) {
+        .card {
+          margin: 3vw;
+          border-radius: 3vw;
+        }
+        .card object {
+          border-radius: 3vw;
+        }
+      }
+      @media only screen and (max-width: 1000px) {
+        .card {
+          width: 90vw;
+          border-radius: 1.5vw;
+        }
+        .card object {
+          align-self: center;
+          border-radius: 1vw;
+          width: 89vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <object
+          type="image/svg+xml"
+          data="assets\images\illustration-article.svg"
+        ></object>
+        <div class="tag">Learning</div>
+        <p class="date">Published 21 Dec 2023</p>
+        <h2>HTML & CSS foundations</h2>
+        <p class="definition">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
+        <div class="author">
+          <img src="assets\images\image-avatar.webp" alt="Profilepicture" />
+          Greg Hooper
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >.
+        <a href="https://steamcommunity.com/id/Rohloffmeister/" target="_blank"
+          >Ulrich Rohloff</a
+        >.
+      </div>
+    </footer>
+  </body>
 </html>
